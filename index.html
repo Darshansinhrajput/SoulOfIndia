@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SoulOfIndia</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fff8f0;
+      color: #4b2e05;
+      line-height: 1.6;
+    }
+    header {
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+      height: 70vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff3e0;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+      text-align: center;
+    }
+    header h1 {
+      font-size: 4rem;
+      margin: 0;
+      font-family: 'Georgia', serif;
+    }
+    header p {
+      font-size: 1.5rem;
+      margin-top: 0.5rem;
+      font-style: italic;
+      max-width: 600px;
+    }
+    nav {
+      background: #6f4e37;
+      padding: 1rem 0;
+      text-align: center;
+      font-weight: bold;
+    }
+    nav a {
+      color: #f3d9b1;
+      margin: 0 20px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #d49f58;
+    }
+    section {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+    section h2 {
+      text-align: center;
+      color: #6f4e37;
+      margin-bottom: 1rem;
+      font-size: 2.5rem;
+      font-family: 'Georgia', serif;
+    }
+    #culture, #nature {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+    .card {
+      background: #fdf6e3;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(111,78,55,0.2);
+      flex: 1 1 300px;
+      padding: 1rem;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      height: 180px;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+    footer {
+      background: #6f4e37;
+      color: #f3d9b1;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 4rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>SoulOfIndia</h1>
+    <p>Discover the rich culture and breathtaking nature of India.</p>
+  </header>
+
+  <nav>
+    <a href="#culture">Culture</a>
+    <a href="#nature">Nature</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="culture">
+    <h2>Indian Culture</h2>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1519337265831-281ec6cc8514?auto=format&fit=crop&w=400&q=80" alt="Festival Celebration" />
+      <h3>Festivals</h3>
+      <p>Experience the vibrant colors and joyous celebrations of Indian festivals like Diwali and Holi.</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80" alt="Traditional Dance" />
+      <h3>Arts & Dance</h3>
+      <p>Explore the diverse traditional dance forms and arts that showcase India’s cultural heritage.</p>
+    </div>
+  </section>
+
+  <section id="nature">
+    <h2>Indian Nature</h2>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Mountain Landscape" />
+      <h3>Mountains</h3>
+      <p>Discover the majestic Himalayas and the serene beauty of India's mountain ranges.</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=400&q=80" alt="Wildlife" />
+      <h3>Wildlife</h3>
+      <p>Get close to nature with India's diverse wildlife and lush national parks.</p>
+    </div>
+  </section>
+
+  <section id="contact" style="text-align:center; padding: 2rem 1rem;">
+    <h2>Contact Us</h2>
+    <p>Questions? Suggestions? Reach out at <a href="mailto:contact@soulofindia.com" style="color:#6f4e37;">contact@soulofindia.com</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 SoulOfIndia — Celebrating culture & nature</p>
+  </footer>
+
+</body>
+</html>
