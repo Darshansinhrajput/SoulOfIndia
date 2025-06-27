@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SoulOfIndia</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #fff8f0;
+      color: #4b2e05;
+    }
+    header {
+      background: url('https://images.unsplash.com/photo-1585479942177-d9e5c1b6f1e7?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+      height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+    }
+    header h1 {
+      font-size: 3.5rem;
+    }
+    nav {
+      background-color: #6f4e37;
+      text-align: center;
+      padding: 1rem;
+    }
+    nav a {
+      color: #f3d9b1;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #ffffff;
+    }
+    section {
+      padding: 2rem;
+      text-align: center;
+    }
+    .card {
+      background: #fbe7c6;
+      padding: 1rem;
+      margin: 1rem auto;
+      border-radius: 8px;
+      max-width: 600px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .card img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    .button {
+      background-color: #6f4e37;
+      color: #f3d9b1;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 10px;
+      transition: background-color 0.3s ease;
+    }
+    .button:hover {
+      background-color: #d49f58;
+    }
+    #search-section input {
+      padding: 10px;
+      width: 250px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    #search-section button {
+      padding: 10px 15px;
+      background-color: #6f4e37;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #searchResult {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    footer {
+      background: #6f4e37;
+      color: #f3d9b1;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Soul of India</h1>
+  </header>
+
+  <nav>
+    <a href="#culture">Culture</a>
+    <a href="#nature">Nature</a>
+    <a href="#wildlife">Wildlife</a>
+    <a href="festivals.html">Festivals</a>
+  </nav>
+
+  <section id="search-section">
+    <input type="text" id="searchInput" placeholder="Search Soul of India..." />
+    <button onclick="searchContent()">Search</button>
+    <p id="searchResult"></p>
+  </section>
+
+  <section id="culture">
+    <h2>Indian Culture</h2>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1524492449090-1e56d1fd67a7?auto=format&fit=crop&w=800&q=80" alt="Indian Culture">
+      <p>India’s culture is one of the oldest and richest in the world. From classical music to vibrant festivals, it celebrates diversity and unity.</p>
+    </div>
+  </section>
+
+  <section id="nature">
+    <h2>Indian Nature</h2>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Indian Mountains">
+      <p>India's natural beauty includes the Himalayas, Western Ghats, forests, rivers, and deserts. It offers incredible biodiversity and landscapes.</p>
+    </div>
+  </section>
+
+  <section id="wildlife">
+    <h2>Wildlife</h2>
+    <div class="card">
+      <h3 style="cursor:pointer;" onclick="toggleWildlife()">🐅 Wildlife of India (Click to Expand)</h3>
+      <div id="wildlife-details" style="display:none; margin-top:10px;">
+        <p>India is home to Bengal tigers, elephants, leopards, rhinos, and more. Explore protected areas like:</p>
+        <ul style="text-align:left; max-width:500px; margin: 0 auto;">
+          <li>Jim Corbett National Park</li>
+          <li>Kaziranga National Park</li>
+          <li>Ranthambore Tiger Reserve</li>
+          <li>Sundarbans Mangroves</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Soul of India. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function toggleWildlife() {
+      const details = document.getElementById('wildlife-details');
+      if (details.style.display === 'none') {
+        details.style.display = 'block';
+      } else {
+        details.style.display = 'none';
+      }
+    }
+
+    function searchContent() {
+      const input = document.getElementById('searchInput').value.toLowerCase();
+      let result = "";
+
+      if (input.includes("festival")) {
+        result = "Festivals: <a href='festivals.html'>Go to Festivals Page</a>";
+      } else if (input.includes("wildlife")) {
+        result = "Wildlife: Scroll to Wildlife section below.";
+      } else if (input.includes("culture")) {
+        result = "Culture: Explore Indian traditions in the Culture section.";
+      } else if (input.includes("mountain") || input.includes("nature")) {
+        result = "Nature: Scroll to Nature section.";
+      } else {
+        result = "No results found. Try 'festival', 'wildlife', 'culture', etc.";
+      }
+
+      document.getElementById("searchResult").innerHTML = result;
+    }
+  </script>
+
+</body>
+</html>
