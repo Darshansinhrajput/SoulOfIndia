@@ -110,6 +110,11 @@
 .button:hover {
   background-color: #d49f58;
 }
+    #wildlife-section h3:hover {
+  color: #d49f58;
+  cursor: pointer;
+}
+
 
   </style>
 </head>
@@ -152,6 +157,23 @@
       <h3>Wildlife</h3>
       <p>Get close to nature with India's diverse wildlife and lush national parks.</p>
     </div>
+
+    <div id="wildlife-section">
+  <h3 style="cursor:pointer; color: #6f4e37;" onclick="toggleWildlife()">Wildlife 🐅 (click to see details)</h3>
+  <div id="wildlife-details" style="display:none; margin-top: 10px; font-size: 1.1rem; max-width: 600px;">
+    <p>
+      India is home to a rich variety of wildlife including Bengal tigers, Indian elephants, peacocks, and many endangered species.
+      National parks like Jim Corbett, Kaziranga, and Ranthambore protect these majestic animals.
+    </p>
+    <ul>
+      <li>Bengal Tiger: The national animal of India.</li>
+      <li>Indian Elephant: Revered and often used in festivals.</li>
+      <li>Peacock: The national bird with beautiful plumage.</li>
+      <li>One-horned Rhinoceros: Found in northeastern India.</li>
+    </ul>
+  </div>
+</div>
+
   </section>
 
   <section id="contact" style="text-align:center; padding: 2rem 1rem;">
@@ -162,6 +184,18 @@
   <footer>
     <p>© 2025 SoulOfIndia — Celebrating culture & nature</p>
   </footer>
+
+  <script>
+  function toggleWildlife() {
+    const details = document.getElementById('wildlife-details');
+    if (details.style.display === 'none') {
+      details.style.display = 'block';
+    } else {
+      details.style.display = 'none';
+    }
+  }
+</script>
+
 
 </body>
 </html>
